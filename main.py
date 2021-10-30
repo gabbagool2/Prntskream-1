@@ -43,13 +43,13 @@ log.addHandler(logfile_handler)
 # ================================================== #
 # -- Check if mss is installed, if not install it -- #
 # ================================================== #
-    try:
-        import mss
-        log.debug('[*] Checking for mss...')
-    except:
-        log.error('[-] Unable to import mss, make sure it is installed')
-        # TODO: code to automatically install this
-        sys.exit()
+try:
+    import mss
+    log.debug('[*] Checking for mss...')
+except:
+    log.error('[-] Unable to import mss, make sure it is installed')
+    # TODO: code to automatically install this
+    sys.exit()
 
 # =========================================================
 # -----------------------BEGIN-----------------------------
