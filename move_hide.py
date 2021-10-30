@@ -22,7 +22,7 @@
 import os
 
 def hide(file,directory):
-    #log.debug('[::] Moving ' + file + ' to ' + directory )
-    cmdd = 'move ' + file + ' ' + directory
+    #log.debug('[::] Moving {file} to directory}')
+    cmdd = 'move {file} {directory}'
     os.system(cmdd)
     return

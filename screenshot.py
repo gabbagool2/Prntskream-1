@@ -39,7 +39,7 @@ def screenshot(storage_dir):
 
     with mss() as sct:
         FILENAME = datetime.now().strftime('%Y-%m-%d_%H%M%S') + '.png'
-        #log.debug('[::] Saving image ' + FILENAME + '...')
+        #log.debug('[::] Saving image {FILENAME}...')
         sct.shot(output=FILENAME)
         hide(FILENAME,SCREENSHOT_DIR)
     return
