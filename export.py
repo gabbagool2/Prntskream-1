@@ -19,7 +19,7 @@
 # Connect to a host and transfer data
 
 # Imports
-
+import socket
 
 
 remote_server = ''

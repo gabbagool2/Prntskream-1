@@ -70,13 +70,13 @@ def main():
 
     log.info("[+] Beginning Prntskr34m")
     
-    # Take screenshot, sleep for 10 seconds, repeat 6 times
+    # Take screenshot once every 5 min
     for i in range(3):
         log.debug("[*] Taking a screenshot..")
-        screenshot(SCREENSHOT_DIR)
+        screenshot('screenshots')
         
         log.debug('[-] Sleeping...')
-        time.sleep(300)
+        time.sleep(500)
         
         
             
