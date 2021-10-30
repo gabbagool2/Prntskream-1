@@ -23,10 +23,8 @@ class Server_tcp:
             client_handler.start()
 
     def handle_client(self,client_socket):
-        SEPARATOR = ';'
-        FILE, FILE_SIZE = req.split(SEPARATOR)
-        FILE = os.path.basename(FILE)
-        FILE_SIZE = int(FILE_SIZE)
+        RECV = client_socket.recv(4098).decode()
+        FILE = os.path.basename(RECV)
         with open(FILE,"wb") as f:
             while True:
                 bytes_read = client_socket.recv(4098)
