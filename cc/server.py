@@ -7,19 +7,19 @@ import threading
 class Server_tcp:
     
     def __init__(self,bind_ip,bind_port):
-        self.bind_ip = bind_ip 
-        self.bind_port = bind_port 
+        self.BIND_IP = bind_ip 
+        self.BIND_PORT = bind_port 
 
-        self.server = sck.socket(sck.AF_INET,sck.SOCK_STREAM)
-        self.server.bind((bind_ip,bind_port))
+        self.SERVER = sck.socket(sck.AF_INET,sck.SOCK_STREAM)
+        self.SERVER.bind((BIND_IP,BIND_PORT))
         
-        self.server.listen(5)
-        print("Listening on",bind_ip,bind_port)
+        self.SERVER.listen(5)
+        print("Listening on",BIND_IP,BIND_PORT)
         
         while True:
-            client,addr = self.server.accept()
-            print('Accepted connection from ',addr[0],addr[1])
-            client_handler = threading.Thread(target=self.handle_client,args=(client,))
+            CLIENT,ADDR = self.SERVER.accept()
+            print('Accepted connection from ',ADDR[0],ADDR[1])
+            client_handler = threading.Thread(target=self.handle_client,args=(CLIENT,))
             client_handler.start()
 
     def handle_client(self,client_socket):
