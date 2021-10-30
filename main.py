@@ -76,7 +76,7 @@ def main():
         screenshot('screenshots')
         
         log.debug('[-] Sleeping...')
-        time.sleep(500)
+        time.sleep(300)
         
         
             
