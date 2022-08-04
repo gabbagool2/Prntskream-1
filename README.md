@@ -1,2 +1,0 @@
-# Prntskream
-Nothing shady here.
